@@ -18,10 +18,10 @@ cat_id = {
 }
 
 # Read the Excel file with the category and content (Ground Truth)
-df_content = pd.read_excel('categorias_documentos.xlsx')
+df_content = pd.read_excel('docs/categorias_documentos.xlsx')
 
 # Read the Excel file with the categories and regex
-df_regex = pd.read_excel('categoria_regexs.xlsx')
+df_regex = pd.read_excel('docs/categoria_regexs.xlsx')
 
 # Create a dictionary of regular expressions by category
 regex_dict = {}
