@@ -1,0 +1,92 @@
+﻿Actúa como un experto en clasificar documentos mediante la detección de expresiones regulares. Te proporcionaré: 1. Categorías a las que puede pertenecer el documento; 2. Una lista de expresiones regulares que caracterizan a cada una de esas categorías y 3. El texto de un documento.
+Para realizar la tarea sigue los siguientes pasos:
+1. Identificar Regex: Analizar el contenido del documento e identificar las expresiones regulares de cada categoría. Para cada categoría, expresar el resultado de la siguiente manera: “De X expresiones regulares proporcionadas para esta categoría, se detectaron Y” y seguidamente precisar cuáles son en forma de lista. No omitir el análisis de ninguna expresión regular para facilitar la verificación humana de la salida. 
+2. Clasificar el documento en una de las categorías: Calcular el porcentaje de expresiones regulares encontradas para cada categoría en el texto del documento. Si en una categoría específica se identifica el 85% o más de las expresiones regulares asociadas, clasifica el documento como perteneciente a esa categoría. Devuelve como resultado de este paso la categoría asignada, si aplica, junto con el desglose porcentual de las coincidencias para cada categoría.
+--------------------
+El listado de categorías es el siguiente:
+* Actividad Crítica
+* Fonaindo con Bruno
+* Fonaindo sin Bruno
+* Franqueros con reso 499
+* Franqueros sin reso 499
+* Material Didáctico
+--------------------
+Las expresiones regulares para cada categoría son las siguientes:
+
+Categoría Actividad Crítica - Expresiones regulares: 
+* "(?i)suplemento (?:especial )?por área crítica 
+* (?i)actividades? en áreas (?:de )?críticas 
+* (?i)Decreto (?:2851/89|2154/89) 
+* (?i)Ley (?:6035|471) 
+* (?i)derecho al cobro del suplemento por actividad crítica 
+* (?i)incremento sostenido del número de pacientes 
+* (?i)carencia de personal idóneo 
+* (?i)derecho a la retribución justa 
+* (?i)suplemento por área crítica 
+* (?i)terapia intensiva 
+* (?i)función crítica 
+* (?i)ordenanza 41455 
+* (?i)carrera municipal de profesionales de la salud"
+
+Categoría Fonaindo con Bruno - Expresiones regulares:
+* "\bFondo\s+Nacional\s+de\s+Incentivo\s+Docente(?:\s*FONAINDO|FONAINDO)?\b \bincorrecta\s+liquidación\s+del\s+código\s+399\b 
+* \bdocentes\s+dependientes\s+de\s+la\s+Secretaría\s+de\s+Educación\b 
+* \bGobierno\s+de\s+la\s+Ciudad\s+de\s+Buenos\s+Aires\bncias\s+salariales\s+provenientes\s +de\s+la\s+incorrecta\s+liquidación\b 
+* \bFondo\s+Nacional\s+de\s+Incentivo\s+Docente\s*FoN ̇aI ̇nD ̇o\b 
+* \bcódigo\s+399\b 
+* \bpersonal\s+docente\s+en\s+actividad\s+y\s+retirado\b 
+* \bdiferencias\s+salariales\s+resultantes\s+del\s+modo\s+erróneo\s+en\s+que\s+se\s+deveng aron\s+sus\s+haberes\b 
+* \bcarácter\s+remunerativo\s+y\s+bonificable\s+del\s+suplemento\b 
+* \bcarácter\s+remunerativo\s+del\s+suplemento\b 
+* \bcarácter\s+bonificable\s+del\s+suplemento\b 
+* \bFondo\s+Nacional\s+de\s+Incentivo\s+Docente\s*\(FONAINDO\)\b 
+* \bcódigo\s+399\b 
+* \bdiferencias\s+salariales\b 
+* \bSueldo\s+Anual\s+Complementario\s+\(SAC\)\b 
+* BRUNO,\s*MARCELO\s*JOSÉ\s*Y\s*OTROS 
+* FALTA\s*DE\s*LEGITIMACIÓN\s*PASIVA"
+
+Categoría Fonaindo sin Bruno - Expresiones regulares: 
+* "\bFondo\s+Nacional\s+de\s+Incentivo\s+Docente(?:\s*FONAINDO|FONAINDO)?\b \bincorrecta\s+liquidación\s+del\s+código\s+399\b 
+* \bdocentes\s+dependientes\s+de\s+la\s+Secretaría\s+de\s+Educación\b 
+* \bGobierno\s+de\s+la\s+Ciudad\s+de\s+Buenos\s+Aires\bncias\s+salariales\s+provenientes\s +de\s+la\s+incorrecta\s+liquidación\b 
+* \bFondo\s+Nacional\s+de\s+Incentivo\s+Docente\s*FoN ̇aI ̇nD ̇o\b 
+* \bcódigo\s+399\b 
+* \bpersonal\s+docente\s+en\s+actividad\s+y\s+retirado\b 
+* \bdiferencias\s+salariales\s+resultantes\s+del\s+modo\s+erróneo\s+en\s+que\s+se\s+deveng aron\s+sus\s+haberes\b 
+* \bcarácter\s+remunerativo\s+y\s+bonificable\s+del\s+suplemento\b 
+* \bcarácter\s+remunerativo\s+del\s+suplemento\b 
+* \bcarácter\s+bonificable\s+del\s+suplemento\b 
+* \bFondo\s+Nacional\s+de\s+Incentivo\s+Docente\s*\(FONAINDO\)\b 
+* \bcódigo\s+399\b 
+* \bdiferencias\s+salariales\b 
+* \bSueldo\s+Anual\s+Complementario\s+\(SAC\)\b"
+
+Categoría Franqueros con reso 499 - Expresiones regulares: 
+* "(?i)e.?n.?f.?e.?r.?m.?e.?r.?o\s*f.?r.?a.?n.?q.?u.?e.?r.?o 
+* (?i)j.?o.?r.?n.?a.?d.?a\s*l.?a.?b.?o.?r.?a.?l 
+* (?i)s.?e.?i.?s\s*h.?o.?r.?a.?s\s*d.?i.?a.?r.?i.?a.?s 
+* (?i)t.?r.?e.?i.?n.?t.?a\s*h.?o.?r.?a.?s\s*s.?e.?m.?a.?n.?a.?l.?e.?s 
+* (?i)á.?r.?e.?a\s*i.?n.?s.?a.?l.?u.?b.?r.?e 
+* (?i)l.?e.?y\s*2.?4.?0.?0.?4 
+* (?i)o.?r.?d.?e.?n.?a.?n.?z.?a\s*4.?0.?4.?0.?3 
+* (?i)r.?e.?s.?o.?l.?u.?c.?i.?ó.?n\s*4.?9.?9.?/2.?0"
+Categoría Franqueros sin reso 499 - Expresiones regulares: 
+* "(?i)e.?n.?f.?e.?r.?m.?e.?r.?o\s*f.?r.?a.?n.?q.?u.?e.?r.?o 
+* (?i)j.?o.?r.?n.?a.?d.?a\s*l.?a.?b.?o.?r.?a.?l 
+* (?i)s.?e.?i.?s\s*h.?o.?r.?a.?s\s*d.?i.?a.?r.?i.?a.?s 
+* (?i)t.?r.?e.?i.?n.?t.?a\s*h.?o.?r.?a.?s\s*s.?e.?m.?a.?n.?a.?l.?e.?s 
+* (?i)á.?r.?e.?a\s*i.?n.?s.?a.?l.?u.?b.?r.?e 
+* (?i)l.?e.?y\s*2.?4.?0.?0.?4 
+* (?i)o.?r.?d.?e.?n.?a.?n.?z.?a\s*4.?0.?4.?0.?3 
+* Resolución\s*conjunta\s*499/MHFGC/20"
+
+Categoría Material Didáctico - Expresiones regulares: 
+* "Material\s*Didáctico\s*Mensual 
+* Material\s*Didáctico 
+* Material\s*Didáctico\s*Bicentenario 
+* carácter\s+remunerativo\s+de\s+los\s+suplementos\s+denominados\s+(“Material\s+Didáctic o”|“Material\s+Didáctico\s+Mensual”|“Material\s+Didáctico\s+del\s+Bicentenario”)\s+liquida dos\s+en\s+su\s+salario\s+con\s+los\s+códigos\s+(“093”|“397”|“493”) 
+* inconstitucionalidad\s+de\s+los\s+decretos\s+(No\s+751/04|547/2005|1294/07) 
+* declarar\s+el\s+carácter\s+remunerativo\s+de\s+los\s+suplementos\s+denominados\s+(“Mat erial\s+Didáctico”|“Material\s+Didáctico\s+Mensual”)\s+y\s+(ordenar\s+al\s+GCBA\s+liquidar los\s+con\s+dicho\s+carácter\s+incluirlos\s+en\s+la\s+base\s+de\s+cálculo\s+de\s+SAC\s+y\s +abonar\s+a\s+la\s+actora\s+las\s+diferencias\s+salariales\s+devengadas\s+por\s+estos\s+co nceptos\s+por\s+los\s+períodos\s+no\s+prescriptos\s+con\s+intereses)"
+
+El contenido del documento que debes clasificar es el siguiente:
