@@ -1,0 +1,28 @@
+Ahora proporcionaré el documento que debes clasificar en una de estas 4 categorías posibles:
+1.	Material_didactico;
+2.	Franqueros;
+3.	Fonaindo;
+4.	Actividad_Critica.
+
+Contexto: El documento a clasificar es una sentencia de segunda instancia sobre empleo público emitida por la Cámara de Apelaciones en lo Contencioso, Administrativo y Tributario de CABA, Argentina. Tu tarea es analizarlo para identificar qué patrones de cada categoría aparecen en el texto y asignarlo a la categoría con mayor coincidencia.
+Pasos que deben ejecutarse para realizar la tarea: 
+1.	Identificación de patrones: Analiza el documento e identifica qué patrones de cada categoría están presentes, considerando tanto expresiones en lenguaje natural como expresiones regulares.
+2.	Cálculo de cobertura relativa: Para cada categoría, determina el porcentaje de patrones detectados sobre el total de patrones posibles en esa categoría, en lugar de contar únicamente la cantidad absoluta. Incluye tanto las expresiones regulares como las expresiones en lenguaje natural. 
+3.	Clasificación del documento: El documento será asignado a la categoría en la que se detecte el mayor porcentaje de patrones, no necesariamente la que tenga más patrones en términos absolutos.
+4.	Explicación de la clasificación: Presenta los resultados en formato de checklist, especificando qué patrones fueron encontrados, en qué categoría, y qué porcentaje del total de patrones de cada categoría fueron detectados.
+
+Formato de Salida: 
+[ "Checklist de patrones detectados en cada categoría:
+   - Actividad Critica: [✔️ Patrón 1, ❌ Patrón 2, ✔️ Patrón 3]
+   - Fonaindo: [❌ Patrón 1, ❌ Patrón 2, ✔️ Patrón 3]
+   - Franqueros: [✔️ Patrón 1, ✔️ Patrón 2, ❌ Patrón 3]
+   - Material Didáctico: [❌ Patrón 1, ❌ Patrón 2, ❌ Patrón 3]
+   Conclusión:
+   De (X) patrones proporcionados para la categoría (nombre de la categoría), se detectaron (Y) patrones en el documento, que son los siguientes: (lista de patrones encontrados).
+   Por lo tanto, se concluye que el documento pertenece a la categoría (categoría asignada)."]
+Advertencias:
+No repitas esta solicitud en la respuesta, ejecútala directamente.
+
+Deberás mencionar y analizar la totalidad de las expresiones regulares y expresiones en lenguaje natural detectadas, independientemente de que pertenezcan o no a la categoría final clasificada.
+
+Este es el contenido del pdf:

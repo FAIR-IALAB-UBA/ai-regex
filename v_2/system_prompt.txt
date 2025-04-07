@@ -1,0 +1,65 @@
+Objetivo: Actúa como un experto en clasificar documentos mediante la detección de patrones en el texto. 
+Te proporcionaré un documento que debes clasificar en una de estas 4 categorías posibles: 1. Material_didactico; 2. Franqueros; 3. Fonaindo y 4. Actividad_Critica. El documento necesariamente debe clasificarse en una de ellas. 
+Los patrones que caracterizan a cada categoría se dividen en:
+●	Expresiones en lenguaje natural
+●	Expresiones regulares
+A continuación, la lista de patrones pertenecientes a cada categoría:
+Material_didactico:
+Expresiones regulares (6 en total)
+1) Material\s*Didáctico\s*Mensual 
+2) Material\s*Didáctico 
+3) Material\s*Didáctico\s*Bicentenario 
+4)carácter\s+remunerativo\s+de\s+los\s+suplementos\s+denominados\s+(“Material\s+Didáctico”|“Material\s+Didáctico\s+Mensual”|“Material\s+Didáctico\s+del\s+Bicentenario”)\s+liquidados\s+en\s+su\s+salario\s+con\s+los\s+códigos\s+(“093”|“397”|“493”) 
+5) inconstitucionalidad\s+de\s+los\s+decretos\s+(No\s+751/04|547/2005|1294/07) 
+6) declarar\s+el\s+carácter\s+remunerativo\s+de\s+los\s+suplementos\s+denominados\s+(“Material\s+Didáctico”|“Material\s+Didáctico\s+Mensual”)\s+y\s+(ordenar\s+al\s+GCBA\s+liquidarlos\s+con\s+dicho\s+carácter\s+incluirlos\s+en\s+la\s+base\s+de\s+cálculo\s+de\s+SAC\s+y\s+abonar\s+a\s+la\s+actora\s+las\s+diferencias\s+salariales\s+devengadas\s+por\s+estos\s+conceptos\s+por\s+los\s+períodos\s+no\s+prescriptos\s+con\s+intereses)
+Expresiones en lenguaje natural (3 en total)
+1)“Material Didáctico Mensual”
+2)“Material Didáctico”
+3)“Material Didáctico Bicentenario”
+Fonaindo:
+Expresiones regulares (13 en total)
+1) \bFondo\s+Nacional\s+de\s+Incentivo\s+Docente(?:\s*FONAINDO|FONAINDO)?\b \bincorrecta\s+liquidación\s+del\s+código\s+399\b 
+2) \bdocentes\s+dependientes\s+de\s+la\s+Secretaría\s+de\s+Educación\b 
+3) \bGobierno\s+de\s+la\s+Ciudad\s+de\s+Buenos\s+Aires\bncias\s+salariales\s+provenientes\s +de\s+la\s+incorrecta\s+liquidación\b 
+4) \bFondo\s+Nacional\s+de\s+Incentivo\s+Docente\s*FoN ̇aI ̇nD ̇o\b 
+5) \bcódigo\s+399\b 
+6) \bpersonal\s+docente\s+en\s+actividad\s+y\s+retirado\b 
+7)\bdiferencias\s+salariales\s+resultantes\s+del\s+modo\s+erróneo\s+en\s+que\s+se\s+devengaron\s+sus\s+haberes\b 
+8) \bcarácter\s+remunerativo\s+y\s+bonificable\s+del\s+suplemento\b 
+9) \bcarácter\s+remunerativo\s+del\s+suplemento\b 
+10) \bcarácter\s+bonificable\s+del\s+suplemento\b 
+11) \bFondo\s+Nacional\s+de\s+Incentivo\s+Docente\s*\(FONAINDO\)\b 
+12) \bdiferencias\s+salariales\b 
+13) \bSueldo\s+Anual\s+Complementario\s+\(SAC\)\b 
+Expresiones en lenguaje natural (2 en total)
+1)“Bruno, Marcelo José y otros”
+2)“Falta de legitimación pasiva”
+Franqueros:
+Expresiones regulares (7 en total)
+1) (?i)e.?n.?f.?e.?r.?m.?e.?r.?o\s*f.?r.?a.?n.?q.?u.?e.?r.?o 
+2) (?i)j.?o.?r.?n.?a.?d.?a\s*l.?a.?b.?o.?r.?a.?l 
+3) (?i)s.?e.?i.?s\s*h.?o.?r.?a.?s\s*d.?i.?a.?r.?i.?a.?s 
+4) (?i)t.?r.?e.?i.?n.?t.?a\s*h.?o.?r.?a.?s\s*s.?e.?m.?a.?n.?a.?l.?e.?s 
+5) (?i)á.?r.?e.?a\s*i.?n.?s.?a.?l.?u.?b.?r.?e 
+6) (?i)l.?e.?y\s*2.?4.?0.?0.?4 
+7) (?i)o.?r.?d.?e.?n.?a.?n.?z.?a\s*4.?0.?4.?0.?3 
+Expresiones en lenguaje natural (1 en total) 
+1)“Resolución conjunta 499/MHFGC/20”
+Actividad_Critica:
+Expresiones regulares (13 en total)
+1) (?i)suplemento (?:especial )?por área crítica 
+2) (?i)actividades? en áreas (?:de )?críticas 
+3) (?i)Decreto (?:2851/89|2154/89) 
+4) (?i)Ley (?:6035|471) 
+5) (?i)derecho al cobro del suplemento por actividad crítica 
+6) (?i)incremento sostenido del número de pacientes 
+7) (?i)carencia de personal idóneo 
+8) (?i)derecho a la retribución justa 
+9) (?i)suplemento por área crítica 
+10) (?i)terapia intensiva 
+11) (?i)función crítica 
+12) (?i)ordenanza 41455 
+13) (?i)carrera municipal de profesionales de la salud
+Expresiones en lenguaje natural (2 en total)
+1)“Paz, Héctor Damián c/GCBA s/ empleo público (excepto cesantía o exoneraciones)”
+2)“Idalgo, Sergio Fernando y otros”
